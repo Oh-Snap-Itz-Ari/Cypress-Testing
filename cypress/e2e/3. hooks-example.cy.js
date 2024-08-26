@@ -19,27 +19,27 @@ describe ('Demo de hooks', function() {
 
   before (function(){
     cy.log('Before'); // Se ejecuta solo una vez en la prueba automatizada
-  })
+  });
 
   beforeEach (function(){
     cy.log('Before Each'); // Se ejecuta n cantidad de veces, de acuerdo a cada test case (it)
-  })
+  });
 
   it('Should be Test #1', function(){
-    console.log('Test #1')
-  })
+    console.log('Test #1');
+  });
 
   it('Should be Test #2', function(){
-    console.log('Test #2')
-  })
+    console.log('Test #2');
+  });
 
   it('Should be Test #3', function(){
-    console.log('Test #3')
-  })
+    console.log('Test #3');
+  });
 
   it.skip('Should be Test #4', function(){
-    console.log('Test #4') // Si se añade el .skip después del it no ejecuta el test case
-  })
+    console.log('Test #4'); // Si se añade el .skip después del it no ejecuta el test case
+  });
 
   /* 
 
@@ -53,11 +53,11 @@ describe ('Demo de hooks', function() {
 
   afterEach (function(){
     cy.log('After Each'); // Se ejecuta n cantidad de veces, de acuerdo a cada test case (it)
-  })
+  });
   
   after (function(){
     cy.log('After'); // Se ejecuta solo una vez en la prueba automatizada
-  })
+  });
 
   
 })

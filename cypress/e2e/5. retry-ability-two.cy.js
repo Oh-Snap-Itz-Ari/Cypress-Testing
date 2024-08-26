@@ -7,12 +7,12 @@ describe ('Sesión de retry-ability', function (){
       .type('Todo-A{enter}') // Tarea de prueba (Escribir "Todo-A" y dar enter)
       .type('Todo-B') 
       .type('{enter}')
-    })
+    });
   
     it('Debe crear 2 items', () => {
       cy.get('.todo-list li', {timeout:20000}) // CSS Selector del listado de tareas, se le añade el Timeout para que tenga hasta 20 segundos buscando este elemento (Default 4 segundos)
       .should('have.length', 2) // Assertion que valida que haya 2 elementos en el ToDo
-    })
+    });
 
     it('Debe contener el texto indicado', () => {
       cy.get('.todo-list li') // CSS Selector del listado de tareas
@@ -21,7 +21,7 @@ describe ('Sesión de retry-ability', function (){
         expect($li.get(0).textContent, 'First-Item').to.equal('Todo-A') // Permite navegar entre los elementos del li y comparar su contenido
         expect($li.get(1).textContent, 'Second-Item').to.equal('Todo-B')
       }) 
-    })
+    });
 
     /* No todos los comandos son reintentados o cuentan con esta función, solo los que hacen Query o intentan
     buscar elementos en el DOM (.find, .contains) */

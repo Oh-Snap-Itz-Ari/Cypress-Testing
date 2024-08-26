@@ -7,14 +7,14 @@ describe ('Sesión de retry-ability', function (){
       .type('Todo-A{enter}') // Tarea de prueba (Escribir "Todo-A" y dar enter)
       .type('Todo-B') 
       .type('{enter}')
-    })
+    });
   
     it('Debe crear 2 items', () => {
       cy.get('.todo-list li') // CSS Selector del listado de tareas
       .should('have.length', 2) // Assertion que valida que haya 2 elementos en el ToDo
-    })
+    });
 
     /* El retry ability tiene configurado por defecto los tiempos de espera antes de que arroje como tal 
     el error */
   
-  })
+  });
