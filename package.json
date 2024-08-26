@@ -1,0 +1,20 @@
+{
+  "name": "cypress-e2e",
+  "version": "1.0.0",
+  "description": "Test Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "Test",
+    "cy:open": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "framework"
+  ],
+  "author": "Alex Melo",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.3"
+  }
+}
